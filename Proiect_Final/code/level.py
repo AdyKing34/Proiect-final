@@ -23,7 +23,7 @@ class Level:
 				if layer == 'Platforms': groups.append(self.semi_collision_sprites)
 				match layer:
 					case 'BG': z = Z_LAYERS['bg tiles']
-					case 'FG': z = Z_LAYERS['fg']
+					case 'FG': z = Z_LAYERS['bg tiles']
 					case _: z = Z_LAYERS['main']
 				Sprite((x * TILE_SIZE,y * TILE_SIZE), surf, groups, z)
 
@@ -44,10 +44,13 @@ class Level:
 						frames = level_frames[obj.name]
 						AnimatedSprite((obj.x, obj.y), frames, self.all_sprites)
 
-
 		# moving objects
 		for obj in tmx_map.get_layer_by_name('Moving Objects'):
-			if obj.name == 'helicopter':
+			if obj.name == 'spike':
+				pass
+			else:
+				frames =level_frames[obj.name]
+				groups = (self.all_sprites, self.semi_collision_sprites) if obj.properties['platform'] else (self.all_sprites, self.damage_sprites)
 				if obj.width > obj.height: # horizontal
 					move_dir = 'x'
 					start_pos = (obj.x, obj.y + obj.height / 2)
@@ -57,7 +60,7 @@ class Level:
 					start_pos = (obj.x + obj.width / 2, obj.y)
 					end_pos = (obj.x + obj.width / 2, obj.y + obj.height)
 				speed = obj.properties['speed']
-				MovingSprite((self.all_sprites, self.semi_collision_sprites), start_pos, end_pos, move_dir, speed)
+				MovingSprite(frames, groups, start_pos, end_pos, move_dir, speed)
 
 	def run(self, dt):
 		self.display_surface.fill('black')

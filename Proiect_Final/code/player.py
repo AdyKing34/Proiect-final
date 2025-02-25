@@ -167,6 +167,9 @@ class Player(pygame.sprite.Sprite):
 		self.image = self.frames[self.state][int(self.frame_index % len(self.frames[self.state]))]
 		self.image = self.image if self.facing_right else pygame.transform.flip(self.image, True, False)
 
+		if self.attacking and self.frame_index > len(self.frames[self.state]):
+			self.attacking = False
+
 	def get_state(self):
 		if self.on_surface['floor']:
 			if self.attacking:
