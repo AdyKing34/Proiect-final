@@ -1,3 +1,5 @@
+import pygame
+
 from settings import *
 from level import Level
 from pytmx.util_pygame import load_pygame
@@ -12,7 +14,7 @@ class Game:
     def __init__(self):
         pygame.init()
         self.display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-        pygame.display.set_caption('Super Pirate World')
+        pygame.display.set_caption('')
         self.clock = pygame.time.Clock()
         self.import_assets()
 
@@ -100,15 +102,30 @@ class Game:
             sys.exit()
 
     def run(self):
+        paused = False
+
         while True:
             dt = self.clock.tick() / 1000
+
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_p:  # Toggle pauză
+                        paused = not paused
+                    if event.key == pygame.K_ESCAPE and paused:  # Ieșire din joc în pauză
+                        pygame.quit()
+                        sys.exit()
 
-            self.check_game_over()
-            self.current_stage.run(dt)
+            if paused:
+                self.ui.draw_pause_menu()
+            else:
+                self.check_game_over()
+                self.current_stage.run(dt)
+
+            #self.check_game_over()
+            #self.current_stage.run(dt)
             self.ui.update(dt)
 
             pygame.display.update()

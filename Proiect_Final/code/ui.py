@@ -40,6 +40,19 @@ class UI:
 		self.coin_amount = amount
 		self.coin_timer.activate()
 
+	def draw_pause_menu(self):
+		pause_surf = self.font.render("PAUSED", False, "White")
+		resume_surf = self.font.render("Press P to Resume", False, "White")
+		exit_surf = self.font.render("Press ESC to Quit", False, "white")
+
+		pause_rect = pause_surf.get_rect(center=(WINDOW_WIDTH // 2, WINDOW_HEIGHT // 3))
+		resume_rect = resume_surf.get_rect(center=(WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2))
+		exit_rect = exit_surf.get_rect(center=(WINDOW_WIDTH // 2, (WINDOW_HEIGHT // 2) + 50))
+
+		self.display_surface.blit(pause_surf, pause_rect)
+		self.display_surface.blit(resume_surf, resume_rect)
+		self.display_surface.blit(exit_surf, exit_rect)
+
 	def update(self, dt):
 		self.coin_timer.update()
 		self.sprites.update(dt)
