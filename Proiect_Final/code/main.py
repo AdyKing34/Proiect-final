@@ -12,7 +12,7 @@ class Game:
     def __init__(self):
         pygame.init()
         self.display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-        pygame.display.set_caption('')
+        pygame.display.set_caption('1 Piece')
         self.clock = pygame.time.Clock()
         self.import_assets()
 
@@ -30,12 +30,14 @@ class Game:
         self.current_stage = Level(self.tmx_maps[self.data.current_level], self.level_frames, self.audio_files,
                                    self.data, self.switch_stage)
         self.bg_music.play(-1)
+        # todo try to enter pause menu
+        self.switch_stage('overworld')
 
     def switch_stage(self, target, unlock=0):
         if target == 'level':
             self.current_stage = Level(self.tmx_maps[self.data.current_level], self.level_frames, self.audio_files,
                                        self.data, self.switch_stage)
-
+            print("debug entry level")
         else:  # overworld
             if unlock > 0:
                 self.data.unlocked_level = 6

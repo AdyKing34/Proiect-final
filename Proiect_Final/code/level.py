@@ -3,7 +3,6 @@ from sprites import Sprite, MovingSprite, AnimatedSprite, Spike, Item, ParticleE
 from player import Player
 from groups import AllSprites
 from enemies import Tooth, Shell, Pearl
-
 from random import uniform
 
 
