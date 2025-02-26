@@ -1,5 +1,3 @@
-import pygame
-
 from settings import *
 from level import Level
 from pytmx.util_pygame import load_pygame
@@ -124,8 +122,6 @@ class Game:
                 self.check_game_over()
                 self.current_stage.run(dt)
 
-            #self.check_game_over()
-            #self.current_stage.run(dt)
             self.ui.update(dt)
 
             pygame.display.update()
