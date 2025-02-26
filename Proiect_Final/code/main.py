@@ -8,7 +8,6 @@ from debug import debug
 from ui import UI
 from overworld import Overworld
 
-
 class Game:
     def __init__(self):
         pygame.init()
