@@ -1,20 +1,37 @@
-# Overworld Game Project
+Pirate World
+Acest proiect este un joc 2D construit folosind Python și Pygame. Jocul prezintă o hartă overworld unde jucătorul poate naviga între diferite niveluri.
 
-This project is a 2D game built using Python and Pygame. The game features an overworld map where the player can navigate between different levels.
+Descriere
+Jocul a fost creat ca proiect final pentru cursul de IT. Scopul acestui joc este de a oferi o experiență captivantă prin navigarea într-un mediu 2D cu multiple niveluri și provocări. Jucătorul poate explora harta overworld, interacționa cu diverse obiecte și inamici, și trebuie să colecteze monede pentru a avansa la următoarele niveluri.
 
-## Features
+Caracteristici
+Navigare Overworld: Jucătorii se pot deplasa între diferite noduri pe harta overworld.
+Sprite-uri Animate: Diverse sprite-uri animate pentru apă, palmieri și alte obiecte.
+Creare de Căi: Creare dinamică de căi între noduri pe harta overworld.
+Schimbare de Nivel: Tranziție fără probleme între overworld și nivelurile individuale.
+Elemente UI: UI în joc pentru afișarea sănătății, monedelor și altor informații.
+Efecte Audio: Muzică de fundal și efecte sonore pentru acțiuni precum colectarea monedelor și sărituri.
+Meniu de Pauză: Posibilitatea de a pune jocul pe pauză și de a afișa un meniu de pauză.
+Verificare Game Over: Verificare automată a condiției de game over bazată pe sănătatea jucătorului.
 
-- **Overworld Navigation**: Players can move between different nodes on the overworld map.
-- **Animated Sprites**: Various animated sprites for water, palms, and other objects.
-- **Path Creation**: Dynamic path creation between nodes on the overworld map.
-- **Level Switching**: Seamless transition between the overworld and individual levels.
-- **UI Elements**: In-game UI for displaying health, coins, and other information.
-- **Audio Effects**: Background music and sound effects for actions like collecting coins and jumping.
-- **Pause Menu**: Ability to pause the game and display a pause menu.
-- **Game Over Check**: Automatic check for game over condition based on player health.
 
-## Usage
+Cerințe de Sistem
+Python 3.7 sau mai recent
+Biblioteca Pygame
 
-Run the game by executing the `main.py` file:
-```sh
+
+Instalare
+Clonează acest repository:
+git clone https://github.com/AdyKing34/Proiect-final.git
+Navighează în directorul proiectului:
+cd Proiect-final
+Instalează dependințele necesare:
+pip install -r requirements.txt
+Utilizare
+Rulează jocul executând fișierul main.py:
+
 python Proiect_Final/code/main.py
+Structura Proiectului
+Proiect_Final/code/: Conține codul sursă al jocului.
+Proiect_Final/assets/: Conține resursele grafice și audio ale jocului.
+Proiect_Final/data/: Conține fișierele de date necesare pentru joc.
