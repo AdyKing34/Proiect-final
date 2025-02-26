@@ -18,20 +18,3 @@ Verificare Game Over: Verificare automată a condiției de game over bazată pe 
 Cerințe de Sistem
 Python 3.7 sau mai recent
 Biblioteca Pygame
-
-
-Instalare
-Clonează acest repository:
-git clone https://github.com/AdyKing34/Proiect-final.git
-Navighează în directorul proiectului:
-cd Proiect-final
-Instalează dependințele necesare:
-pip install -r requirements.txt
-Utilizare
-Rulează jocul executând fișierul main.py:
-
-python Proiect_Final/code/main.py
-Structura Proiectului
-Proiect_Final/code/: Conține codul sursă al jocului.
-Proiect_Final/assets/: Conține resursele grafice și audio ale jocului.
-Proiect_Final/data/: Conține fișierele de date necesare pentru joc.
