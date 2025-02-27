@@ -19,5 +19,5 @@ Caracteristici
 
 
 Cerințe de Sistem
-Python 3.7 sau mai recent
-Biblioteca Pygame
+- Python 3.7 sau mai recent
+- Biblioteca Pygame
