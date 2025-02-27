@@ -37,7 +37,6 @@ class Game:
         if target == 'level':
             self.current_stage = Level(self.tmx_maps[self.data.current_level], self.level_frames, self.audio_files,
                                        self.data, self.switch_stage)
-            print("debug entry level")
         else:  # overworld
             if unlock > 0:
                 self.data.unlocked_level = 6
