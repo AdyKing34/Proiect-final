@@ -8,14 +8,14 @@ Jocul a fost creat ca proiect final pentru cursul de IT. Scopul acestui joc este
 
 Caracteristici
 
-Navigare Overworld: Jucătorii se pot deplasa între diferite noduri pe harta overworld.
-Sprite-uri Animate: Diverse sprite-uri animate pentru apă, palmieri și alte obiecte.
-Creare de Căi: Creare dinamică de căi între noduri pe harta overworld.
-Schimbare de Nivel: Tranziție fără probleme între overworld și nivelurile individuale.
-Elemente UI: UI în joc pentru afișarea sănătății, monedelor și altor informații.
-Efecte Audio: Muzică de fundal și efecte sonore pentru acțiuni precum colectarea monedelor și sărituri.
-Meniu de Pauză: Posibilitatea de a pune jocul pe pauză și de a afișa un meniu de pauză.
-Verificare Game Over: Verificare automată a condiției de game over bazată pe sănătatea jucătorului.
+- Navigare Overworld: Jucătorii se pot deplasa între diferite noduri pe harta overworld.
+- Sprite-uri Animate: Diverse sprite-uri animate pentru apă, palmieri și alte obiecte.
+- Creare de Căi: Creare dinamică de căi între noduri pe harta overworld.
+- Schimbare de Nivel: Tranziție fără probleme între overworld și nivelurile individuale.
+- Elemente UI: UI în joc pentru afișarea sănătății, monedelor și altor informații.
+- Efecte Audio: Muzică de fundal și efecte sonore pentru acțiuni precum colectarea monedelor și sărituri.
+- Meniu de Pauză: Posibilitatea de a pune jocul pe pauză și de a afișa un meniu de pauză.
+- Verificare Game Over: Verificare automată a condiției de game over bazată pe sănătatea jucătorului.
 
 
 Cerințe de Sistem
